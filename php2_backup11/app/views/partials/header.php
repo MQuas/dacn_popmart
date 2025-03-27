@@ -9,19 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">New & Featured</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link active" href="<?= _WEB_ROOT_ ?>/series">Series</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Mega</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Types</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Accessories</a>
                     </li>
                 </ul>
                 <div class="action-user">
