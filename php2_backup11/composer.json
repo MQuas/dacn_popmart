@@ -1,0 +1,17 @@
+{
+    "name": "mjh2u/php2backup11",
+    "autoload": {
+        "psr-4": {
+            "Mjh2u\\Php2backup11\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MQuas",
+            "email": "163760893+MQuas@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.18"
+    }
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../../../../public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Product Details</title>
+  <style>
+    a{
+      color: black;
+    }
+    .product-section{
+      margin-bottom: 10px;
+    }
+    .product-container {
+      max-width: 800px;
+      margin: auto; 
+    }
+    .thumbnail-images img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border: 0;
+    }
+    .main-image img {
+      max-height: 300px;
+      object-fit: contain;
+    }
+    .btn-quantity {
+  width: 30px; 
+  height: 30px;
+}
+.product-link{
+  color: black;
+}
+body > div.container.mt-5.product-container > div > div:nth-child(2) > button:nth-child(7){
+  background-color: rgb(196, 14, 14);
+  color: white;
+  border: none;
+  border-radius: 0px;
+}
+body > div.container.mt-5.product-container > div > div:nth-child(2) > button:nth-child(6){
+  border-radius: 0px;
+}
+body > div.container.mt-5.product-container > div > div:nth-child(2) > button.btn.btn-outline-secondary.w-100{
+  border-radius: 0px;
+}
+/* btn{
+  border-radius: 0px;
+  font-weight: bold;
+  font-family: sans-serif;
+} */
+        .product-container {
+            text-align: center;
+            padding: 30px;
+        }
+        .product-image {
+            max-width: 100%;
+            border-radius: 15px;
+            /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+        }
+        .product-title {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .product-caption {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+        }
+  </style>
+</head>
+<body>
+  <div class="container-fluid nav-home">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="../../../public/img/banner&logo/logo.png" alt="Logo" width="50" height="50">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">New & featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">SERIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">MEGA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">TYPES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">ACCESSORIES</a>
+                    </li>
+                </ul>
+                <div class="action-user">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">My Account</a>
+                        </li>
+                      
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="InputContainer">
+                    <input
+                        placeholder="Search"
+                        id="input"
+                        class="input"
+                        name="text"
+                        type="text"
+                    />
+                    <label class="labelforsearch" for="input">
+                        <svg class="searchIcon" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                            ></path>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+  <div class="container mt-5 product-container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="main-image mb-3 text-center">
+          <img src="../../../public/img/sanpham/20241204_133450_346641____1_____1200x1200.jpg" class="imgage-fluid" alt="Main Product Image">
+        </div>
+        <div class="d-flex justify-content-center gap-2 thumbnail-images">
+          <img src="../../../public/img/sanpham/detail/20241204_133450_923065____2_____1200x1200.jpg" class="img-thumbnail" alt="Thumbnail 1">
+          <img src="../../../public/img/sanpham/detail/20241204_133450_806741____3_____1200x1200.jpg" class="img-thumbnail" alt="Thumbnail 2">
+          <img src="../../../public/img/sanpham/detail/20241204_133450_630521____4_____1200x1200.jpg" class="img-thumbnail" alt="Thumbnail 3">
+          <img src="../../../public/img/sanpham/detail/20241204_133450_311475____5_____1200x1200.jpg" class="img-thumbnail" alt="Thumbnail 4">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <span class="badge bg-warning text-dark text-uppercase">New</span>
+        </div>
+        <h5>Hirono The Little Prince Figurine</h5>
+        <h4 class="text-danger mb-3">2.520.000 ₫</h4>
+        <div class="d-flex align-items-center mb-3">
+            <label for="quantity" class="me-2">Quantity:</label>
+            <div class="input-group input-group-sm" style="max-width: 120px;"> <!-- Thu nhỏ toàn bộ nhóm input -->
+              <button class="btn btn-outline-secondary btn-quantity" id="decreaseQty" type="button">-</button>
+              <input type="text" class="form-control text-center form-control-sm" id="quantity" value="1" min="1">
+              <button class="btn btn-outline-secondary btn-quantity" id="increaseQty" type="button">+</button>
+            </div>
+          </div>
+          
+        <p class="text-muted mb-4">Max 1(set) per person</p>
+        <button class="btn btn-dark w-100 mb-3">Add to Cart</button>
+        <button class="btn btn-dark w-100 mb-3">Buy Now</button>
+        <button class="btn btn-outline-secondary w-100">Notify Me When Available</button>
+        <hr>
+   
+        <h6 class="text-uppercase">Details</h6>
+        <ul class="list-unstyled mt-3">
+          <li><strong>Brand:</strong> POP MART</li>
+          <li><strong>Product Size:</strong> Height about 17.5cm</li>
+          <li><strong>Material:</strong> PVC/ABS</li>
+        </ul>
+        <div class="mt-3">
+          <a href="#" class="text-decoration-none text-black me-4">View Product Details</a>
+          <a href="#" class="text-decoration-none text-black">What's a blind box</a>
+        </div>
+        <hr>
+   
+        <h6 class="text-uppercase">Terms of Service</h6>
+        <div class="accordion mt-3" id="shippingAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                SHIPPING & AFTER-SALES SERVICE
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#shippingAccordion">
+              <div class="accordion-body">
+                
+1. Shipping:
+Standard Shipping (15-30 working days)
+Expedited Shipping (3-7 working days)
+2. Defects:
+(1) Limited items don't have an exchange service. Ifyou find a serious defect in the item, contact support@popmart.com, with the related order number and unpacking video of the figurine within five (5) days of receiving the product.
+(2)For information security reasons, please contact us with the email address you used to place the order. You will be contacted by a Customer Support Representative who will assist you in resolving the issue.
+(3)In order to avoid any disputes regarding refunds or exchanges, customers are encouraged to video record themselves opening the package. A video
+recording must be completed no later than two days after delivery. A video should clearly show the shipping sheet, the package condition, and product defects.
+3. Tax fees:
+For international express shipments, the buyer shall bear any Customs Duty costs
+              </div>
+            </div>
+          </div>
+          <!-- <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Return Policy
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#shippingAccordion">
+              <div class="accordion-body">
+                Information about returns and refunds will go here.
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container product-container">
+    <h1 class="product-title">Product Show</h1>
+    <img src="../../../public/img/sanpham/detail/20241211_165453_012806_____07_____1200x1619.webp" alt="Product Image" class="product-image">
+    <p class="product-caption">The figurine and chair can be separated and placed individually.</p>
+</div>
+  <section class="product-section py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text fw-bold">You May Also Like</h2>
+            <a href="#" class="text-decoration-none text-dark">More &gt;</a>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <div class="col">
+                <a href="product-detail.html" class="product-link">
+                <div class="card h-100 text-center">
+                    <img src="../../../public/img/sanpham/20241204_133450_346641____1_____1200x1200.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <p class="text-muted mb-1">Dec 06 17:00</p>
+                        <h6 class="card-title">MEGA SPACE MOLLY 1000% Stitch</h6>
+                        <p class="text-danger fw-bold">€1,116.00</p>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <img src="../../../public/img/sanpham/20241204_132213_437045____1_____1200x1200.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <p class="text-muted mb-1">Dec 06 17:00</p>
+                        <h6 class="card-title">MEGA CRYBABY 400% The Queen of...</h6>
+                        <p class="text-danger fw-bold">€1,116.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <img src="../../../public/img/sanpham/20241205_171707_915892____1_____1200x1200.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <p class="text-muted mb-1">Dec 06 17:00</p>
+                        <h6 class="card-title">Baby Molly × Pingu Fishing Series</h6>
+                        <p class="text-danger fw-bold">€1,116.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <img src="../../../public/img/sanpham/20241204_181940_443663____1_____1200x1200.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <p class="text-muted mb-1">Dec 06 17:00</p>
+                        <h6 class="card-title">Baby Molly × PINGU Fishing Time</h6>
+                        <p class="text-danger fw-bold">€1,116.00</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">About Us</h5>
+        <p>
+          POP MART is a global art toy brand that brings creativity to life. Our mission is to deliver happiness and inspire through unique collectibles.
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:support@popmart.com" class="text-light">support@popmart.com</a>
+        </p>
+        <p>
+          <strong>Phone:</strong> +1 234 567 890
+        </p>
+      </div>
+      <div class="col-md-2 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light">FAQs</a></li>
+          <li><a href="#" class="text-light">Terms & Conditions</a></li>
+          <li><a href="#" class="text-light">Privacy Policy</a></li>
+          <li><a href="#" class="text-light">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Follow Us</h5>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Newsletter</h5>
+        <p>Subscribe to receive updates on new products and offers.</p>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Your email address">
+          <button style="background-color: rgb(199, 11, 11)" class="btn btn-danger">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <hr class="text-secondary">
+
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">&copy; 2024 POP MART. All Rights Reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <img src="../../../public/img/footer&logo/visa.png" alt="Visa" class="me-2" style="height: 30px;">
+        <img src="../../../public/img/footer&logo/mastercard.png" alt="MasterCard" class="me-2" style="height: 30px;">
+        <img src="../../../public/img/footer&logo/paypal.png" alt="PayPal" style="height: 30px;">
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('decreaseQty').addEventListener('click', function () {
+      const qtyInput = document.getElementById('quantity');
+      let value = parseInt(qtyInput.value, 10);
+      if (value > 1) qtyInput.value = value - 1;
+    });
+
+    document.getElementById('increaseQty').addEventListener('click', function () {
+      const qtyInput = document.getElementById('quantity');
+      let value = parseInt(qtyInput.value, 10);
+      qtyInput.value = value + 1;
+    });
+  </script>
+</body>
+</html>

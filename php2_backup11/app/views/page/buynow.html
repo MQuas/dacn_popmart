@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Section</title>
+    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .checkout-section {
+            padding: 20px;
+            max-width: 900px; 
+            margin: 40px auto; 
+            background-color: #fff; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+        .addon-item {
+            border: 1px solid #f5f5f5;
+            background-color: #f9f9f9;
+            padding: 15px;
+        }
+        .addon-item img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 0; 
+        }
+        .btn-sold-out {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            cursor: not-allowed;
+            border-radius: 0; 
+        }
+        button {
+            border-radius: 0px !important; 
+        }
+        .order-summary img {
+            max-width: 80px;
+            max-height: 80px; 
+            height: auto; 
+            border-radius: 0; 
+        }
+        
+        .modal-content {
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #000;
+            border-color: #000;
+        }
+        .btn-primary:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+        .modal-dialog {
+            max-width: 700px; 
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid nav-home">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <img class="navbar-brand" src="public/img/banner&logo/logo.png" alt="Logo" width="50" height="50">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">New & featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">SERIES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">MEGA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">TYPES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">ACCESSORIES</a>
+                        </li>
+                    </ul>
+                    <div class="action-user">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">My Account</a>
+                            </li>
+                           
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="InputContainer">
+                        <input
+                            placeholder="Search"
+                            id="input"
+                            class="input"
+                            name="text"
+                            type="text"
+                        />
+                        <label class="labelforsearch" for="input">
+                            <svg class="searchIcon" viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                                ></path>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container checkout-section">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="mb-4">
+                    <h5>Address Book:</h5>
+                    <p>You don’t have saved address. To save time, please add your shipping address.</p>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#addressModal">Add a new address</button>
+                </div>
+                <div class="mb-4">
+                    <h5>COUPON:</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter your coupon code">
+                        <button class="btn btn-dark">APPLY</button>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h5>Add-on purchase:</h5>
+                    <div class="addon-item d-flex align-items-center">
+                        <img src="public/img/sanpham/" alt="Add-on item">
+                        <div>
+                            <p>Orders over 560.000 ₫ are eligible for purchase</p>
+                            <h6>SKULLPANDA Bunny or Doggy Figure</h6>
+                            <p>700.000 ₫</p>
+                            <a href="#">view details</a>
+                        </div>
+                        <button class="btn-sold-out ms-auto">SOLD OUT</button>
+                    </div>
+                </div>
+                <div>
+                    <h5>BILLING ADDRESS:</h5>
+                    <button class="btn btn-outline-secondary">Add a Billing address</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-buynow p-3 order-summary">
+                    <h5>Subtotal: <span class="float-end">280.000 ₫</span></h5>
+                    <h5>Shipping: <span class="float-end">0 ₫</span></h5>
+                    <hr>
+                    <h4>Total (1): <span class="float-end">280.000 ₫</span></h4>
+                    <p class="text-end">Reward 11 Points</p>
+                    <hr>
+                    <div class="d-flex">
+                        <img src="public/img/sanpham/20241024_103823_152308____2_____1200x1200.webp" alt="Order item">
+                        <div class="ms-3">
+                            <p>DIMOO Weaving Wonders Series Figures</p>
+                            <p>Single Box</p>
+                            <p>280.000 ₫</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="btn btn-danger w-100">PROCEED TO PAY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-light pt-5">
+        <div class="container">
+  
+          <div class="row">
+    
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold">About Us</h5>
+              <p>
+                POP MART is a global art toy brand that brings creativity to life. Our mission is to deliver happiness and inspire through unique collectibles.
+              </p>
+              <p>
+                <strong>Email:</strong> <a href="mailto:support@popmart.com" class="text-light">support@popmart.com</a>
+              </p>
+              <p>
+                <strong>Phone:</strong> +1 234 567 890
+              </p>
+            </div>
+            <div class="col-md-2 mb-4">
+              <h5 class="fw-bold">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light">FAQs</a></li>
+                <li><a href="#" class="text-light">Terms & Conditions</a></li>
+                <li><a href="#" class="text-light">Privacy Policy</a></li>
+                <li><a href="#" class="text-light">Contact Us</a></li>
+              </ul>
+            </div>
+      
+    
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold">Follow Us</h5>
+              <div class="d-flex gap-3">
+                <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+      
+         
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold">Newsletter</h5>
+              <p>Subscribe to receive updates on new products and offers.</p>
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Your email address">
+                <button style="background-color: rgb(199, 11, 11)" class="btn btn-danger">Subscribe</button>
+              </div>
+            </div>
+          </div>
+      
+     
+          <hr class="text-secondary">
+      
+   
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="mb-0">&copy; 2024 POP MART. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <img src="public/img/footer&logo/visa.png" alt="Visa" class="me-2" style="height: 30px;">
+              <img src="public/img/footer&logo/mastercard.png" alt="MasterCard" class="me-2" style="height: 30px;">
+              <img src="public/img/footer&logo/paypal.png" alt="PayPal" style="height: 30px;">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addressModalLabel">Add a New Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <div class="input-group">
+                                <span class="input-group-text">+84</span>
+                                <input type="text" class="form-control" id="phone" placeholder="Phone (In case we need to contact you about your order)" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apartment" class="form-label">Apartment, Suite, etc. (Optional)</label>
+                            <input type="text" class="form-control" id="apartment" placeholder="Apartment, Suite, etc. (Optional)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City/Ward/Town/Village</label>
+                            <input type="text" class="form-control" id="city" placeholder="City/Ward/Town/Village" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="province" class="form-label">Province/State</label>
+                                <select class="form-select" id="province" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>Hanoi</option>
+                                    <option>Ho Chi Minh City</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="zip" class="form-label">Zip Code</label>
+                                <input type="text" class="form-control" id="zip" placeholder="Zip Code" required>
+                            </div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="defaultAddress">
+                            <label class="form-check-label" for="defaultAddress">
+                                Set as default address
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
